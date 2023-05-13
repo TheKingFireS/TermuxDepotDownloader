@@ -9,7 +9,8 @@ chmod +x installproot.sh
 ./installproot.sh
 ```
 
-If you get issue during ./installproot.sh (Use termux-change-repo for...)
+**If you get issue during ./installproot.sh (Use termux-change-repo for...)**
+
 run that command ``termux-change-repo``
 
 Press enter for select "Main repository".
@@ -18,7 +19,7 @@ Press down and press spacebar for select "Mirrors by A1batross".
 
 Try again run ``./installproot.sh``
 
-If you get paused by that message "Configuration file '/data/data...."
+**If you get paused by that message "Configuration file '/data/data...."**
 
 Just press enter at everything else.
 ## Run the PRoot debian, download and run Depotdownloader
