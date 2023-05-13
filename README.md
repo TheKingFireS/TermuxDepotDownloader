@@ -39,6 +39,10 @@ chmod +x installdepotdownloader32.sh
 ./installdepotdownloader32.sh
 ```
 ## Using of Depotdownloader
+Now, enter the depotdownloader directory by run that command
+```bash
+cd depotdownloader
+```
 Exemple: ``../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
 
 App 220 is Half-Life 2 game.
