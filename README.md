@@ -8,7 +8,6 @@ curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/
 chmod +x installproot.sh
 ./installproot.sh
 ```
-
 **If you get issue during ./installproot.sh (Use termux-change-repo for...)**
 
 run that command ``termux-change-repo``
@@ -52,7 +51,26 @@ Depot 221 is Half-Life 2 Base.
 For more info, look up app in steamdb.info.
 
 -dir HL2 is where directory to download.
+
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
 ../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
 ```
+## Create link PRoot directory for Android file manager.
+**to exit PRoot**
+
+``exit``
+
+**to create link directory**
+```bash
+ln -s /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/debian/root/ /data/data/com.termux/files/home/droot
+```
+**to open Android file manager**
+
+Marc apps & software's Files: https://play.google.com/store/apps/details?id=com.marc.files
+
+click hamburger icon
+
+click Termux with Termux icon
+
+You should see folder named ``droot``
