@@ -25,24 +25,24 @@ Just press enter at everything else.
 ```bash
 proot-distro login debian
 ```
-Now, download and run the Depotdownloader script for ARM 64bit devices.
+**Now, download and run the Depotdownloader script for ARM 64bit devices.**
 ```bash
 curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/installdepotdownloader64.sh" -o installdepotdownloader64.sh
 chmod +x installdepotdownloader64.sh
 ./installdepotdownloader64.sh
 ```
-or for ARM 32bit devices.
+**or for ARM 32bit devices.**
 ```bash
 curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/installdepotdownloader32.sh" -o installdepotdownloader32.sh
 chmod +x installdepotdownloader32.sh
 ./installdepotdownloader32.sh
 ```
 ## Using of Depotdownloader
-Now, enter the depotdownloader directory by run that command
+**Now, enter the depotdownloader directory by run that command**
 ```bash
 cd depotdownloader
 ```
-Exemple: ``../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
+**Exemple:** ``../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
 
 App 220 is Half-Life 2 game.
 
