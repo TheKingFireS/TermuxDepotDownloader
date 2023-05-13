@@ -2,7 +2,7 @@
 ## Install Termux from Github or F-droid to replace outdated Google Play Store version
  - Github(choose the right architecture or use ``universal``): https://github.com/termux/termux-app/releases/latest
  - F-Droid: https://f-droid.org/en/packages/com.termux
-## Download and run script for Termux.
+## Download and run a script for Termux.
 ```bash
 curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/installproot.sh" -o installproot.sh
 chmod +x installproot.sh
@@ -21,7 +21,7 @@ Try again run ``./installproot.sh``
 **If you get paused by that message "Configuration file '/data/data...."**
 
 Just press enter at everything else.
-## Run the PRoot debian, download and run Depotdownloader
+## Run the PRoot debian, download and run the Depotdownloader
 ```bash
 proot-distro login debian
 ```
