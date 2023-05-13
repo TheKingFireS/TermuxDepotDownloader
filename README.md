@@ -26,10 +26,14 @@ chmod +x installdepotdownloader32.sh
 ```
 ## Using of Depotdownloader
 Exemple: ``../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
- - App 220 is Half-Life 2 game.
- - Depot 221 is Half-Life 2 Base.
- - For more info, look up app in steamdb.info.
- - -dir HL2 is where directory to download.
+
+App 220 is Half-Life 2 game.
+
+Depot 221 is Half-Life 2 Base.
+
+For more info, look up app in steamdb.info.
+
+-dir HL2 is where directory to download.
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
 ../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
