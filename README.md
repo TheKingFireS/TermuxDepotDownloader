@@ -8,6 +8,15 @@ curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/
 chmod +x installproot.sh
 ./installproot.sh
 ```
+
+If you get issue during ./installproot.sh (Use termux-change-repo for...)
+run that command ``termux-change-repo``
+
+Press enter for select "Main repository"
+
+Press down and press spacebar for select "Mirrors by A1batross"
+
+Try again run ``./installproot.sh``
 ## Run the PRoot debian, download and run Depotdownloader
 ```bash
 proot-distro login debian
