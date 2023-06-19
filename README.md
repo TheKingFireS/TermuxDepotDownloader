@@ -21,7 +21,7 @@ Try again run ``./installproot.sh``
 **If you get paused by that message "Configuration file '/data/data...."**
 
 Just press enter at everything else.
-## Run the PRoot debian, download and run the Depotdownloader
+## Run the PRoot Debian, download and run the Depotdownloader
 ```bash
 proot-distro login debian
 ```
@@ -42,7 +42,7 @@ chmod +x installdepotdownloader32.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
+**Exemple:** ``./DepotDownloader -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
 
 App 220 is Half-Life 2 game.
 
@@ -54,18 +54,11 @@ For more info, look up app in steamdb.info.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
-../dotnet/dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
+./DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
 ```
 **Workaround for errors:**
 
-If you get that error ``Failed to create CoreCLR, HRESULT: 0x80004005`` while executing DepotDownloader.
-```bash
-nano ~/.bashrc
-#Then add that text to .bashrc
-export COMPlus_EnableDiagnostics=0
-```
-After done edit file, save and close file in Nano:
-First, press CTRL+o, then press Enter and last, press CTRL+x.
+Nothing errors. Please post issue if you find error.
 
 ## Create link PRoot directory for Android file manager.
 **to exit PRoot**
