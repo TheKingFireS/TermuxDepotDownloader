@@ -1,5 +1,5 @@
 
-## Install Termux from Github or F-droid to replace outdated Google Play Store version
+## Install Termux from Github or F-Droid to replace outdated Google Play Store version
  - Github(choose the right architecture or use ``universal``): https://github.com/termux/termux-app/releases/latest
  - F-Droid: https://f-droid.org/en/packages/com.termux
 ## Download and run a script for Termux.
