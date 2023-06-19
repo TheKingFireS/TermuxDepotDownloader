@@ -8,7 +8,7 @@ curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/
 chmod +x installproot.sh
 ./installproot.sh
 ```
-**If you get issue during ./installproot.sh (Use termux-change-repo for...)**
+**If you get error during ./installproot.sh (Use termux-change-repo for...)**
 
 run that command ``termux-change-repo``
 
