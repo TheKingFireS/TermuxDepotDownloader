@@ -21,11 +21,11 @@ Try again run ``./installproot.sh``
 **If you get paused by that message "Configuration file '/data/data...."**
 
 Just press enter at everything else.
-## Run the PRoot Debian, download and run the Depotdownloader
+## Run the PRoot Debian, download and run the DepotDownloader
 ```bash
 proot-distro login debian
 ```
-**Now, download and run the Depotdownloader script for ARM 64bit devices.**
+**Now, download and run the DepotDownloader script for ARM 64bit devices.**
 ```bash
 curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/installdepotdownloader64.sh" -o installdepotdownloader64.sh
 chmod +x installdepotdownloader64.sh
@@ -37,7 +37,7 @@ curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotdownloader/main/
 chmod +x installdepotdownloader32.sh
 ./installdepotdownloader32.sh
 ```
-## Using of Depotdownloader
+## Using of DepotDownloader
 **Now, enter the depotdownloader directory by run that command**
 ```bash
 cd depotdownloader
