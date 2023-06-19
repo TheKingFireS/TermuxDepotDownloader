@@ -54,7 +54,7 @@ For more info, look up app in steamdb.info.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
-./DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
+./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
 ```
 **Workaround for errors:**
 
