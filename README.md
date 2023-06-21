@@ -54,15 +54,7 @@ For more info, look up app in steamdb.info.
 
 Nothing errors. Please post issue if you find error.
 
-## Create link PRoot directory for Android file manager.
-**to exit PRoot**
-
-``exit``
-
-**to create link directory**
-```bash
-ln -s /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/debian/root/ /data/data/com.termux/files/home/droot
-```
+## Opening PRoot directory using Android file manager.
 **to open Android file manager**
 
 Marc apps & software's Files: https://play.google.com/store/apps/details?id=com.marc.files
