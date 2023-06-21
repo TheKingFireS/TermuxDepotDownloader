@@ -4,7 +4,7 @@
  - F-Droid: https://f-droid.org/en/packages/com.termux
 ## Download and run a script for Termux.
 ```bash
-curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installproot.sh" -o installproot.sh
+curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installproot.sh"
 chmod +x installproot.sh
 ./installproot.sh
 ```
@@ -27,7 +27,7 @@ proot-distro login debian
 ```
 **Now, downloading and running the DepotDownloader script.**
 ```bash
-curl "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installdepotdownloader.sh" -o installdepotdownloader.sh
+curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installdepotdownloader.sh"
 chmod +x installdepotdownloader.sh
 ./installdepotdownloader.sh
 ```
