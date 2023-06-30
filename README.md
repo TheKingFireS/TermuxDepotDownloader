@@ -48,11 +48,17 @@ For more info, look up app in steamdb.info.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
-./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID
+./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME
 ```
 **Workaround for errors:**
 
-Nothing errors. Please post issue if you find error.
+If you have that error ``Error: -app not specified!``, then run this command instead.
+```bash
+./DepotDownloader -app APPID -depot DEPOTID -dir FOLDERNAME -username <Steam Username> -password <Steam Password> -remember-password
+```
+For some reason, Termux on some devices has issue reading ability
+
+Please post issue if you find another error.
 
 ## Opening PRoot directory using Android file manager.
 **to open Android file manager**
