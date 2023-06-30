@@ -36,7 +36,7 @@ chmod +x installdepotdownloader.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``./DepotDownloader -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2``
+**Exemple:** ``./DepotDownloader -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2 -validate``
 
 App 220 is Half-Life 2 game.
 
@@ -48,13 +48,13 @@ For more info, look up app in steamdb.info.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
-./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME
+./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME -validate
 ```
 **Workaround for errors:**
 
 If you have that error ``Error: -app not specified!``, then run this command instead.
 ```bash
-./DepotDownloader -app APPID -depot DEPOTID -dir FOLDERNAME -username <Steam Username> -password <Steam Password> -remember-password
+./DepotDownloader -app APPID -depot DEPOTID -dir FOLDERNAME -validate -username <Steam Username> -password <Steam Password> -remember-password
 ```
 For some reason, Termux on some devices has issue reading ability
 
