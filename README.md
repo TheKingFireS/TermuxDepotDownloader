@@ -46,6 +46,8 @@ For more info, look up app in steamdb.info.
 
 -dir HL2 is where directory to download.
 
+-validate is include checksum verification of files already downloaded.
+
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
 ./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME -validate
