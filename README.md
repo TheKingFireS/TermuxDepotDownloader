@@ -36,7 +36,7 @@ chmod +x installdepotdownloader.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``./DepotDownloader -username <Steam Username> -password <Steam Password> -app 220 -depot 221 -dir HL2 -validate``
+**Exemple:** ``./DepotDownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
 
 App 220 is Half-Life 2 game.
 
