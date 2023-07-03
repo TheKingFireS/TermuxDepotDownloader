@@ -10,7 +10,7 @@ chmod +x installproot.sh
 ```
 **If you get error during ./installproot.sh (Use termux-change-repo for...)**
 
-run that command ``termux-change-repo``
+Run that command ``termux-change-repo``
 
 Press enter for select "Main repository".
 
@@ -63,7 +63,19 @@ For some reason, Termux on some devices has issue reading ability
 Please post issue if you find another error.
 
 ## Opening PRoot directory using Android file manager.
-**to open Android file manager**
+Android file manager is notorious for slowest copying when it come to heavy folders. You must compress folder.
+
+**To compress folder**
+
+```bash
+tar czf AnyNames.tar.gz Folders
+```
+(Optional): remove unnecessary folders to free up storage space.
+```bash
+rm -rf folder/ folder2/ folder3/ file file2
+```
+
+**To open Android file manager**
 
 Marc apps & software's Files: https://play.google.com/store/apps/details?id=com.marc.files
 
