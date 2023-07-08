@@ -65,7 +65,7 @@ Please post issue if you find another error.
 ## Opening PRoot directory using Android file manager.
 Android file manager is notorious for slowest copying when it come to heavy folders. You must compress folder.
 
-**To compress folder.** You can change file name, but don't change file extension(.tar.gz)!
+**To compress folder.** You can change file name and folders name, but don't change file extension(.tar.gz)!
 
 ```bash
 tar czvf AnyNames.tar.gz Folders
