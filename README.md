@@ -1,4 +1,5 @@
 
+
 ## Install Termux from Github or F-Droid to replace outdated Google Play Store version
  - Github(choose the right architecture or use ``universal``): https://github.com/termux/termux-app/releases/latest
  - F-Droid: https://f-droid.org/en/packages/com.termux
@@ -8,7 +9,7 @@ curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/m
 chmod +x installproot.sh
 ./installproot.sh
 ```
-**If you get error during ./installproot.sh (Use termux-change-repo for...)**
+### If you get error during ./installproot.sh (Use termux-change-repo for...)
 
 Run that command ``termux-change-repo``
 
@@ -18,21 +19,21 @@ Press down and press spacebar for select "Mirrors by A1batross".
 
 Try again run ``./installproot.sh``
 
-**If you get paused by that message "Configuration file '/data/data...."**
+### If you get paused by that message "Configuration file '/data/data...."
 
 Just press enter at everything else.
 ## Login into the PRoot Debian, downloading and running the DepotDownloader
 ```bash
 proot-distro login debian
 ```
-**Now, downloading and running the DepotDownloader script.**
+### Now, downloading and running the DepotDownloader script.
 ```bash
 curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installdepotdownloader.sh"
 chmod +x installdepotdownloader.sh
 ./installdepotdownloader.sh
 ```
 ## Using of DepotDownloader
-**Now, enter the depotdownloader directory by run that command**
+### Now, enter the depotdownloader directory by run that command
 ```bash
 cd depotdownloader
 ```
@@ -72,7 +73,7 @@ tar czvf AnyNames.tar.gz Folders
 ```
 (Optional): remove unnecessary folders to free up storage space.
 ```bash
-rm -rf folder/ folder2/ folder3/ file file2
+rm -rfv folder/ folder2/ folder3/ file file2
 ```
 
 **To open Android file manager**
