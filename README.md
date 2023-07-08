@@ -68,7 +68,7 @@ Android file manager is notorious for slowest copying when it come to heavy fold
 **To compress folder.** You can change file name, but don't change file extension(.tar.gz)!
 
 ```bash
-tar czf AnyNames.tar.gz Folders
+tar czvf AnyNames.tar.gz Folders
 ```
 (Optional): remove unnecessary folders to free up storage space.
 ```bash
