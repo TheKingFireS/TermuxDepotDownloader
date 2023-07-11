@@ -39,15 +39,15 @@ cd depotdownloader
 ```
 **Exemple:** ``./DepotDownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
 
-App 220 is Half-Life 2 game.
+(Must do) ``-app 220`` is a specifying AppID of Half-Life 2 game.
 
-Depot 221 is Half-Life 2 Base.
+(Optional) ``-depot 221`` is a specifying DepotID of Half-Life 2 Base.
 
 For more info, look up app in steamdb.info.
 
--dir HL2 is where directory to download.
+(Optional) ``-dir HL2`` is where directory to download.
 
--validate is include checksum verification of files already downloaded.
+(Must do) ``-validate`` is include checksum verification of files already downloaded.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
