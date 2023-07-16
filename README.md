@@ -82,7 +82,7 @@ rm -rfv folder/ folder2/ folder3/ file file2
 
 Marc apps & software's Files: https://play.google.com/store/apps/details?id=com.marc.files
 
-click hamburger icon
+click hamburger or 3 horizontal lines icon
 
 click Termux with Termux icon
 
