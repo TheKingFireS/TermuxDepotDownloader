@@ -3,7 +3,7 @@
 arch=$(arch)
 apt update && apt full-upgrade -y
 apt install wget libicu72 -y
-if [[ "$arch" == x86_64* ]]; then
+if [ "$arch" == "x86_64" ]; then
 	echo "X86_64 Architecture"
 	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-x64.zip"
 elif [ "$arch" == "armv7l" ]; then
