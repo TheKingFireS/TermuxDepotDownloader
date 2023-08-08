@@ -39,6 +39,8 @@ cd depotdownloader
 ```
 **Exemple:** ``./DepotDownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
 
+(Note) Special characters need quote in password, e.g: ``-password "p@$$word"``
+
 (Must do) ``-app 220`` is a specifying AppID of Half-Life 2 game.
 
 (Optional) ``-depot 221`` is a specifying DepotID of Half-Life 2 Base.
