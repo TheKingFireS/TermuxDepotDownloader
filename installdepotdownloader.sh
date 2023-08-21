@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/ash
 # Only use this if you're in PRoot.
 arch=$(arch)
-if [ "$arch" == "i686" ]; then
+if [ "$arch" = "i686" ]; then
 	echo "X86_32 architecture detected, unsupported."
 	exit
 fi
