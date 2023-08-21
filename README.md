@@ -5,7 +5,7 @@
  - F-Droid: https://f-droid.org/en/packages/com.termux
 ## Download and run a script for Termux.
 ```bash
-curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installproot.sh"
+curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installproot.sh"
 chmod +x installproot.sh
 ./installproot.sh
 ```
@@ -22,13 +22,13 @@ Try again run ``./installproot.sh``
 ### If you get paused by that message "Configuration file '/data/data...."
 
 Just press enter at everything else.
-## Login into the PRoot Debian, downloading and running the DepotDownloader
+## Login into the PRoot Alpine, downloading and running the DepotDownloader
 ```bash
-proot-distro login debian
+proot-distro login alpine
 ```
 ### Now, downloading and running the DepotDownloader script.
 ```bash
-curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installdepotdownloader.sh"
+curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installdepotdownloader.sh"
 chmod +x installdepotdownloader.sh
 ./installdepotdownloader.sh
 ```
@@ -37,7 +37,7 @@ chmod +x installdepotdownloader.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``./DepotDownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
+**Exemple:** ``dotnet DepotDownloader.dll -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
 
 (Note) Special characters need quote in password, e.g: ``-password "p@$$word"``
 
@@ -53,13 +53,13 @@ For more info, look up app in steamdb.info.
 
 **DepotDownloader:** Downloading game(remove <>)
 ```bash
-./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME -validate
+dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME -validate
 ```
 **Workaround for errors:**
 
 If you have that error ``Error: -app not specified!``, then run this command instead.
 ```bash
-./DepotDownloader -app APPID -depot DEPOTID -dir FOLDERNAME -validate -username <Steam Username> -password <Steam Password> -remember-password
+dotnet DepotDownloader.dll -app APPID -depot DEPOTID -dir FOLDERNAME -validate -username <Steam Username> -password <Steam Password> -remember-password
 ```
 For some reason, Termux on some devices has issue reading ability
 
