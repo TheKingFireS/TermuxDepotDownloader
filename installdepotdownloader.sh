@@ -1,21 +1,11 @@
 #!/bin/bash
 # Only use this if you're in PRoot.
 arch=$(arch)
-apt update && apt full-upgrade -y
-apt install wget libicu72 -y
-if [ "$arch" == "x86_64" ]; then
-	echo "X86_64 Architecture"
-	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-x64.zip"
-elif [ "$arch" == "armv7l" ]; then
-	echo "ARM32 Architecture"
-	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-arm.zip"
-elif [ "$arch" == "aarch64" ]; then
-	echo "ARM64 Architecture"
-	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-arm64.zip"
-else
-	echo "No supported architectures detected, exiting..."
+if [ "$arch" == "i686" ]; then
+	echo "X86_32 architecture detected, unsupported."
 	exit
 fi
+apk upgrade && apk add dotnet
+curl -LO "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/depotdownloader-2.5.0.zip"
 mkdir depotdownloader && cd depotdownloader || exit
-unzip ../DepotDownloader.zip
-chmod u+x DepotDownloader
+unzip ../depotdownloader-2.5.0.zip
