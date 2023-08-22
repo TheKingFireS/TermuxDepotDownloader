@@ -57,7 +57,7 @@ dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password>
 ```
 **Workaround for errors:**
 
-If you get that error ``Failed to create CoreCLR, HRESULT: 0x80004005`` while executing DepotDownloader.
+If you get that error ``Failed to create CoreCLR, HRESULT: 0x80004005`` while executing DepotDownloader. (Don't copy it all, only ``export ...`` part)
 ```bash
 nano ~/.bashrc
 #Then add that text to .bashrc
