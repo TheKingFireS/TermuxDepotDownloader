@@ -59,8 +59,8 @@ dotnet DepotDownloader.dll -username <Steam Username> -password <Steam Password>
 
 If you get that error ``Failed to create CoreCLR, HRESULT: 0x80004005`` while executing DepotDownloader. (Don't copy it all, only ``export ...`` part)
 ```bash
-nano ~/.bashrc
-#Then add that text to .bashrc
+nano /etc/profile
+#Then add that text to profile
 export COMPlus_EnableDiagnostics=0
 ```
 After done edit file, save and close file in Nano:
