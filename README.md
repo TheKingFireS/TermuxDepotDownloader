@@ -37,9 +37,11 @@ chmod +x installdepotdownloader.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``./DepotDownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
+**Exemple:** ``./DepotDownloader -username user -password 1234 -remember-password -app 220 -depot 221 -dir HL2 -validate``
 
 (Note) Special characters need quote in password, e.g: ``-password "p@$$word"``
+
+(Optional) ``-remember-password`` is like "Remember me" feature, you can use your account in next session without having to accept notification from your Steam Guard. Also keep that argument line in next session.
 
 (Must do) ``-app 220`` is a specifying AppID of Half-Life 2 game.
 
