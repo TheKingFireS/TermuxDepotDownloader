@@ -91,3 +91,7 @@ click hamburger or 3 horizontal lines icon
 click Termux with Termux icon
 
 You should see folder named ``droot``
+
+**To extracting .tar.gz file**
+
+You have to use ZArchiver to able extract these specific type of archive.
