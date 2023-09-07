@@ -14,8 +14,9 @@ elif [ "$arch" == "aarch64" ]; then
 	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-arm64.zip"
 else
 	echo "No supported architectures detected, exiting..."
-	exit
+	exit 1
 fi
 mkdir depotdownloader && cd depotdownloader || exit
 unzip ../DepotDownloader.zip
+rm ../DepotDownloader.zip
 chmod u+x DepotDownloader
