@@ -6,7 +6,7 @@ apt install wget libicu72 -y
 if [ "$arch" == "x86_64" ]; then
 	echo "X86_64 Architecture"
 	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-x64.zip"
-elif [ "$arch" == "armv7l" ]; then
+elif [ "$arch" == "armv7l" ] || [ "$arch" == "armv8l" ]; then
 	echo "ARM32 Architecture"
 	wget -O "DepotDownloader.zip" "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/DepotDownloader-linux-arm.zip"
 elif [ "$arch" == "aarch64" ]; then
