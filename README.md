@@ -18,10 +18,6 @@ Press enter for select "Main repository".
 Press down and press spacebar for select "Mirrors by A1batross".
 
 Try again run ``./installproot.sh``
-
-### If you get paused by that message "Configuration file '/data/data...."
-
-Just press enter at everything else.
 ## Login into the PRoot Alpine, downloading and running the DepotDownloader
 ```bash
 proot-distro login alpine
