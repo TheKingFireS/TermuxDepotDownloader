@@ -35,7 +35,7 @@ cd depotdownloader
 ```
 **Exemple:** ``./DepotDownloader -username user -password 1234 -remember-password -app 220 -depot 221 -dir HL2 -validate``
 
-(Note) Special characters need quote in password, e.g: ``-password "p@$$word"``
+(Note) Special characters need quote in password, e.g: ``-password 'wowap@$$word!!'``
 
 (Optional) ``-remember-password`` is like "Remember me" feature, you can use your account in next session without having to accept notification from your Steam Guard. Also keep that argument line in next session.
 
@@ -49,7 +49,7 @@ For more info, look up app in steamdb.info.
 
 (Must do) ``-validate`` is include checksum verification of files already downloaded.
 
-**DepotDownloader:** Downloading game(remove <>)
+**DepotDownloader:** Downloading game (remove <>)
 ```bash
 ./DepotDownloader -username <Steam Username> -password <Steam Password> -remember-password -app APPID -depot DEPOTID -dir FOLDERNAME -validate
 ```
