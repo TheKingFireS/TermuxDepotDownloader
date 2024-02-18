@@ -5,7 +5,8 @@ if [ "$arch" = "i686" ]; then
 	echo "X86_32 architecture detected, unsupported."
 	exit 1
 fi
-apk update && apk upgrade && apk add dotnet6-runtime
+apk update && apk upgrade
+apk add dotnet6-runtime
 wget "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.5.0/depotdownloader-2.5.0.zip"
 mkdir depotdownloader && cd depotdownloader || exit
 unzip ../depotdownloader-2.5.0.zip
