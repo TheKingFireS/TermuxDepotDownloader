@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/sh
+#!/data/data/com.termux/files/usr/bin/env sh
 # Download and install proot alpine
 pkg upgrade -y -o Dpkg::Options::="--force-confold"
 pkg install proot-distro -y
