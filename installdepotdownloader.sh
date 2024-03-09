@@ -7,7 +7,7 @@ installersetup() {
 }
 dlfile() {
 	url="$1"
-	curl -Lo "DepotDownloader.zip" "$url"
+	curl --retry 10 --retry-delay 2 --retry-all-errors -Lo "DepotDownloader.zip" "$url"
 }
 if [ "$arch" = "x86_64" ]; then
 	echo "X86_64 Architecture"
