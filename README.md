@@ -24,7 +24,7 @@ proot-distro login alpine
 ```
 ### Now, downloading and running the DepotDownloader script.
 ```bash
-curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installdepotdownloader.sh"
+wget "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installdepotdownloader.sh"
 chmod +x installdepotdownloader.sh
 ./installdepotdownloader.sh
 ```
