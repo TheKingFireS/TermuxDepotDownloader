@@ -19,8 +19,8 @@ elif echo "$arch" | grep -q 'armv[7-9]l$'; then
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.6.0/DepotDownloader-linux-arm.zip"
 elif [ "$arch" = "aarch64" ]; then
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" >> /etc/profile
- 	source /etc/profile
- 	echo "Added 'export DOTNET_GCHeapHardLimit=1C0000000' workaround"
+	. /etc/profile
+	echo "Added 'export DOTNET_GCHeapHardLimit=1C0000000' workaround"
 	echo "ARM64 Architecture"
 	installersetup
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.6.0/DepotDownloader-linux-arm64.zip"
@@ -33,6 +33,7 @@ if [ ! -d "depotdownloader" ]; then
 	unzip ../DepotDownloader.zip
 	rm ../DepotDownloader.zip
 	chmod u+x DepotDownloader
+	cd "$HOME"
 else
 	echo "DepotDownloader already installed, exiting..."
 	exit 0
