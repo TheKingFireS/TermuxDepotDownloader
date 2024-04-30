@@ -14,3 +14,4 @@ wget "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownload
 mkdir depotdownloader && cd depotdownloader || exit
 unzip ../DepotDownloader-framework.zip
 rm ../DepotDownloader-framework.zip DepotDownloader.exe DepotDownloader.pdb
+cd "$HOME" || exit
