@@ -33,7 +33,7 @@ if [ ! -d "depotdownloader" ]; then
 	unzip ../DepotDownloader.zip
 	rm ../DepotDownloader.zip
 	chmod u+x DepotDownloader
-	cd "$HOME"
+	cd "$HOME" || exit
 else
 	echo "DepotDownloader already installed, exiting..."
 	exit 0
