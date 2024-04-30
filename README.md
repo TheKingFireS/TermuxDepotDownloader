@@ -26,7 +26,7 @@ proot-distro login debian
 ```bash
 curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/main/installdepotdownloader.sh"
 chmod +x installdepotdownloader.sh
-./installdepotdownloader.sh
+. ./installdepotdownloader.sh
 ```
 ## Using of DepotDownloader
 ### Now, enter the depotdownloader directory by run that command
