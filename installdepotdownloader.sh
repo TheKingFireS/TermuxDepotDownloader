@@ -4,6 +4,9 @@ arch=$(arch)
 if [ "$arch" = "i686" ]; then
 	echo "X86_32 architecture detected, unsupported."
 	exit 1
+elif [ "$arch" = "aarch64" ]; then
+	echo "export DOTNET_GCHeapHardLimit=1C0000000" >> /etc/profile
+	. /etc/profile
 fi
 apk update && apk upgrade
 apk add dotnet8-runtime
