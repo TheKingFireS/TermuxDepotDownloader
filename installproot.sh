@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/env sh
-# Download and install proot debian
+# Download and install proot debian (WIP)
 # setting env
 arch=$(dpkg --print-architecture)
 username="user"
