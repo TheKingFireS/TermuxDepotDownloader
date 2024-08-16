@@ -3,7 +3,8 @@
 #setting env
 username="user"
 print_green() {
-  printf "\033[1;92m$1\033[0m\n"
+	#Bold bright green
+	printf "\033[1;92m$1\033[0m\n"
 }
 #end of setting env
 proot-distro login debian --user $username --bind "$HOME"/storage/downloads/depotdownloaded:/home/$username --shared-tmp -- DepotDownloader "$@" || exit
