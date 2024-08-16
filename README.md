@@ -13,9 +13,9 @@ chmod +x installproot.sh
 
 Run that command ``termux-change-repo``
 
-Press enter for select "Main repository".
+Press enter for select "Mirror group".
 
-Press down and press spacebar for select "Mirrors by A1batross".
+Press arrow keys and press spacebar for select continent that you're currently living in.
 
 Try again run ``./installproot.sh``
 ## Login into the PRoot Debian, downloading and running the DepotDownloader
