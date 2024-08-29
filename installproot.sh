@@ -46,17 +46,17 @@ dlfile() {
 if [ "$arch" = "amd64" ]; then
 	echo "X86_64 Architecture"
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.6.0/DepotDownloader-linux-x64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-x64.zip"
 elif [ "$arch" = "arm" ]; then
 	echo "ARM32 Architecture"
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.6.0/DepotDownloader-linux-arm.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-arm.zip"
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM64 Architecture"
 	echo "Added 'GC heap initialization failed with error 0x8007000E' workaround"
 	installersetup
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" >> $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.6.0/DepotDownloader-linux-arm64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-arm64.zip"
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
