@@ -43,7 +43,7 @@ dlfile() {
 }
 # end of setting env
 
-if [ "$arch" = "amd64" ]; then
+if [ "$arch" = "x86_64" ]; then
 	echo "X86_64 Architecture"
 	installersetup
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-x64.zip"
