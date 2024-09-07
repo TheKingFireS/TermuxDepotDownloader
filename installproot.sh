@@ -8,7 +8,7 @@ installersetup() {
 	ln -s /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/debian/root/ /data/data/com.termux/files/home/droot
 }
 
-if [ "$arch" = "amd64" ]; then
+if [ "$arch" = "x86_64" ]; then
 	echo "X86_64 Architecture"
 	installersetup
 elif [ "$arch" = "arm" ]; then
