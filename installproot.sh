@@ -12,16 +12,15 @@ installersetup() {
 	#update and installing required debian packages
 	proot-distro login debian --shared-tmp -- apt update
 	proot-distro login debian --shared-tmp -- apt dist-upgrade -y
-	proot-distro login debian --shared-tmp -- apt install sudo libicu72 -y
+	proot-distro login debian --shared-tmp -- apt install sudo libicu72 liblttng-ust1 -y
 	proot-distro login debian --shared-tmp -- apt autoclean
 	proot-distro login debian --shared-tmp -- apt clean
 	#add user
 	proot-distro login debian --shared-tmp -- groupadd storage
 	proot-distro login debian --shared-tmp -- groupadd wheel
 	proot-distro login debian --shared-tmp -- useradd -m -g users -G wheel,storage -s /bin/bash "$username"
-	chmod u+rw $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/sudoers
-	echo "$username ALL=(ALL) NOPASSWD:ALL" | tee -a $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/sudoers > /dev/null
-	chmod u-w  $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/sudoers
+	echo "$username ALL=(ALL) NOPASSWD:ALL" > $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/sudoers.d/$username
+	chmod u-w  $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/sudoers.d/$username
 	#setup storage and directory for depotdownloader
 	if [ ! -d "storage" ]; then
 		termux-setup-storage
@@ -55,9 +54,10 @@ elif [ "$arch" = "aarch64" ]; then
 	echo "ARM64 Architecture"
 	echo "Added 'GC heap initialization failed with error 0x8007000E' workaround"
 	installersetup
-	echo "export DOTNET_GCHeapHardLimit=1C0000000" >> $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile
+	echo "export DOTNET_GCHeapHardLimit=1C0000000" > $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile.d/dotnet.sh
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-arm64.zip"
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
 fi
+exit 0
