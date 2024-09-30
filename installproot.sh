@@ -12,7 +12,7 @@ installersetup() {
 	#update and installing required debian packages
 	proot-distro login debian --shared-tmp -- apt update
 	proot-distro login debian --shared-tmp -- apt dist-upgrade -y
-	proot-distro login debian --shared-tmp -- apt install sudo libicu72 liblttng-ust1 -y
+	proot-distro login debian --shared-tmp -- apt install sudo libicu72 libgssapi-krb5-2 -y
 	proot-distro login debian --shared-tmp -- apt autoclean
 	proot-distro login debian --shared-tmp -- apt clean
 	#add user
