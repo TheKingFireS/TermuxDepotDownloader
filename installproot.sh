@@ -22,11 +22,13 @@ installersetup() {
 	echo "permit nopass :wheel as root" > $PREFIX/var/lib/proot-distro/installed-rootfs/alpine/etc/doas.d/doas.conf
 	chmod u-w  $PREFIX/var/lib/proot-distro/installed-rootfs/alpine/etc/doas.d/doas.conf
 	#setup storage and directory for depotdownloader
-	if [ ! -d "storage" ]; then
+	if [ ! -d "$HOME/storage" ]; then
 		termux-setup-storage
-		mkdir storage/downloads/depotdownloaded
-	elif [ ! -d "storage/downloads/depotdownloaded" ]; then
-		mkdir storage/downloads/depotdownloaded
+		while ! [ -d "$HOME/storage" ]; do
+			sleep 0.1
+		done
+	elif [ ! -d "$HOME/storage/downloads/depotdownloaded" ]; then
+		mkdir $HOME/storage/downloads/depotdownloaded
 	fi
 }
 
