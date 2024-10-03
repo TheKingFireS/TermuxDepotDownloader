@@ -27,7 +27,8 @@ installersetup() {
 		while ! [ -d "$HOME/storage" ]; do
 			sleep 0.1
 		done
-	elif [ ! -d "$HOME/storage/downloads/depotdownloaded" ]; then
+	fi
+	if [ ! -d "$HOME/storage/downloads/depotdownloaded" ]; then
 		mkdir $HOME/storage/downloads/depotdownloaded
 	fi
 }
