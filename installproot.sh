@@ -24,6 +24,7 @@ installersetup() {
 	#setup storage and directory for depotdownloader
 	if [ ! -d "storage" ]; then
 		termux-setup-storage
+		mkdir storage/downloads/depotdownloaded
 	elif [ ! -d "storage/downloads/depotdownloaded" ]; then
 		mkdir storage/downloads/depotdownloaded
 	fi
