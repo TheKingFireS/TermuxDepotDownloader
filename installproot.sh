@@ -12,7 +12,7 @@ installersetup() {
 	#update and installing required debian packages
 	proot-distro login debian --shared-tmp -- apt update
 	proot-distro login debian --shared-tmp -- apt dist-upgrade -y
-	proot-distro login debian --shared-tmp -- apt install sudo libicu72 libgssapi-krb5-2 -y
+	proot-distro login debian --shared-tmp -- apt install sudo libicu72 -y
 	proot-distro login debian --shared-tmp -- apt autoclean
 	proot-distro login debian --shared-tmp -- apt clean
 	#add user
@@ -45,17 +45,17 @@ dlfile() {
 if [ "$arch" = "x86_64" ]; then
 	echo "X86_64 Architecture"
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-x64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-x64.zip"
 elif [ "$arch" = "arm" ]; then
 	echo "ARM32 Architecture"
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-arm.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm.zip"
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM64 Architecture"
 	echo "Added 'GC heap initialization failed with error 0x8007000E' workaround"
 	installersetup
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" > $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile.d/dotnet.sh
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.1/DepotDownloader-linux-arm64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm64.zip"
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
