@@ -18,7 +18,7 @@ elif [ "$arch" = "aarch64" ]; then
 	echo "ARM64 Architecture"
 	echo "Added 'export DOTNET_GCHeapHardLimit=1C0000000' workaround"
 	installersetup
-	echo "export DOTNET_GCHeapHardLimit=1C0000000" >> $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile
+	echo "export DOTNET_GCHeapHardLimit=1C0000000" > $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile.d/dotnet.sh
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
