@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Only use this if you're in PRoot.
-arch=$(arch)
+arch=$(dpkg --print-architecture)
 installersetup() {
 	apt update && apt full-upgrade -y
 	apt install libicu72 -y
@@ -9,13 +9,13 @@ dlfile() {
 	url="$1"
 	curl --retry 10 --retry-delay 2 --retry-all-errors -Lo "DepotDownloader.zip" "$url"
 }
-if [ "$arch" = "x86_64" ]; then
+if [ "$arch" = "amd64" ]; then
 	installersetup
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-x64.zip"
-elif echo "$arch" | grep -q 'armv[7-9]l$'; then
+elif [ "$arch" = "armhf" ]; then
 	installersetup
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm.zip"
-elif [ "$arch" = "aarch64" ]; then
+elif [ "$arch" = "arm64" ]; then
 	installersetup
 	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm64.zip"
 else
