@@ -60,6 +60,11 @@ elif [ "$arch" = "aarch64" ]; then
 	installersetup
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" > $PREFIX/var/lib/proot-distro/installed-rootfs/alpine/etc/profile.d/dotnet.sh
 	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
+#Added it, will uncomment when it get supported.
+#elif [ "$arch" = "riscv64" ]; then
+#	echo "RISC-V 64bit Architecture"
+#	installersetup
+#	dlfile "..."
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
