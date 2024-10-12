@@ -11,7 +11,7 @@ print_red() {
 	printf "\033[1;31m$1\033[0m\n"
 }
 #end of setting env
-proot-distro login alpine --user $username --bind "$HOME"/storage/downloads/depotdownloaded:/home/$username --shared-tmp -- DepotDownloader "$@"
+proot-distro login alpine --user $username --shared-tmp -- ash -c "cd /storage/emulated/0/Download/depotdownloaded && DepotDownloader \"\$@\"" -- "$@"
 if [ $? -eq 0 ]; then
 	print_green "Download finished! Check the 'Downloads/depotdownloaded' folder in your file manager app."
 else
