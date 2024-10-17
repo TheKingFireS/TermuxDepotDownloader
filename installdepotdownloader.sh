@@ -11,13 +11,13 @@ dlfile() {
 }
 if [ "$arch" = "amd64" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.3/DepotDownloader-linux-x64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-x64.zip"
 elif [ "$arch" = "armhf" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.3/DepotDownloader-linux-arm.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm.zip"
 elif [ "$arch" = "arm64" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.3/DepotDownloader-linux-arm64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm64.zip"
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
