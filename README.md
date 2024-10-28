@@ -34,6 +34,8 @@ For more info, look up app in steamdb.info.
 
 (Must do) ``-validate`` is include checksum verification of files already downloaded.
 
+For more information about DepotDownloader, check out SteamRE's [Depotdownloader repo](https://github.com/SteamRE/DepotDownloader).
+
 **DepotDownloader:** Downloading game (remove <>)
 ```bash
 depotdownloader -username <Steam Username> -password <Steam Password> -app APPID -depot DEPOTID -dir FOLDERNAME -validate
