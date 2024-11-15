@@ -16,7 +16,7 @@ installersetup() {
 	#update and installing required alpine packages
 	proot-distro login alpine --shared-tmp -- apk update
 	proot-distro login alpine --shared-tmp -- apk upgrade
-	proot-distro login alpine --shared-tmp -- apk add doas icu-libs
+	proot-distro login alpine --shared-tmp -- apk add doas libstdc++ libgcc
 	proot-distro login alpine --shared-tmp -- apk cache clean
 	rm "$installed_rootfs"/alpine/var/cache/apk/*.apk
 	#add user
