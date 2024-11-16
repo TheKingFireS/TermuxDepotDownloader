@@ -3,7 +3,6 @@
 arch=$(dpkg --print-architecture)
 installersetup() {
 	apt update && apt full-upgrade -y
-	apt install libicu72 -y
 }
 dlfile() {
 	url="$1"
@@ -11,13 +10,13 @@ dlfile() {
 }
 if [ "$arch" = "amd64" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-x64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.4/DepotDownloader-linux-x64.zip"
 elif [ "$arch" = "armhf" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.4/DepotDownloader-linux-arm.zip"
 elif [ "$arch" = "arm64" ]; then
 	installersetup
-	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.2/DepotDownloader-linux-arm64.zip"
+	dlfile "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.7.4/DepotDownloader-linux-arm64.zip"
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
