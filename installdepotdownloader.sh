@@ -3,6 +3,8 @@
 arch=$(dpkg --print-architecture)
 installersetup() {
 	apt update && apt full-upgrade -y
+	apt autoclean
+	apt clean
 }
 dlfile() {
 	url="$1"
