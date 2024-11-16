@@ -23,10 +23,9 @@ else
 fi
 if [ ! -d "depotdownloader" ]; then
 	mkdir depotdownloader && cd depotdownloader || exit
-	unzip ../DepotDownloader.zip
+	unzip -j ../DepotDownloader.zip "DepotDownloader"
 	rm ../DepotDownloader.zip
 	chmod u+x DepotDownloader
-	cd "$HOME" || exit
 else
 	echo "DepotDownloader already installed, exiting..."
 	exit 0
