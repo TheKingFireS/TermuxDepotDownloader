@@ -16,7 +16,7 @@ elif [ "$arch" = "arm" ]; then
 	installersetup
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM64 Architecture"
-	echo "Added 'export DOTNET_GCHeapHardLimit=1C0000000' workaround"
+	echo "Added 'GC heap initialization failed with error 0x8007000E' workaround"
 	installersetup
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" > $PREFIX/var/lib/proot-distro/installed-rootfs/debian/etc/profile.d/dotnet.sh
 else
