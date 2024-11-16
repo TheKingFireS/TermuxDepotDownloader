@@ -33,13 +33,15 @@ chmod +x installdepotdownloader.sh
 ```bash
 cd depotdownloader
 ```
-**Exemple:** ``./DepotDownloader -username user -password 1234 -remember-password -app 220 -depot 221 -dir HL2 -validate``
+**Exemple:** ``./DepotDownloader -username user -password 1234 -remember-password -app 220 -beta steam_legacy -depot 221 -dir HL2 -validate``
 
 (Note) Special characters need quote in password, e.g: ``-password 'wowap@$$word!!'``
 
 (Optional) ``-remember-password`` is like "Remember me" feature, you can use your account in next session without having to accept notification from your Steam Guard. Also keep that argument line in next session.
 
-(Must do) ``-app 220`` is a specifying AppID of Half-Life 2 game.
+(Must do) ``-app 220`` is specifying AppID of Half-Life 2 game.
+
+(Depending on some games) `-beta steam_legacy` is specifiying steam_legacy branch of HL2 to download, this allow to download previous build of HL2 instead of latest. Required this time.
 
 (Optional) ``-depot 221`` is a specifying DepotID of Half-Life 2 Base.
 
