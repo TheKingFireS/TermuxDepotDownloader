@@ -12,6 +12,8 @@ installersetup() {
 	#update and installing required termux packages
 	pkg upgrade -y -o Dpkg::Options::="--force-confold"
 	pkg install proot-distro unzip -y
+	pkg autoclean
+	pkg clean
 	proot-distro install alpine
 	#update and installing required alpine packages
 	proot-distro login alpine --shared-tmp -- apk update
