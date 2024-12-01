@@ -43,9 +43,9 @@ dlfile() {
 	#download file and extract file to alpine's bin executable directory
 	url="$1"
 	curl --retry 10 --retry-delay 2 --retry-all-errors -Lo "DepotDownloader.zip" "$url"
-	unzip -j DepotDownloader.zip "DepotDownloader" -d "$installed_rootfs"/alpine/usr/bin
+	unzip -j DepotDownloader.zip "DepotDownloader" -d "$installed_rootfs"/alpine/usr/local/bin
 	rm DepotDownloader.zip
-	chmod u+x "$installed_rootfs"/alpine/usr/bin/DepotDownloader
+	chmod u+x "$installed_rootfs"/alpine/usr/local/bin/DepotDownloader
 	#download wrapper file for depotdownloader
 	curl --retry 10 --retry-delay 2 --retry-all-errors -Lo "$PREFIX"/bin/depotdownloader "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/depotdownloader.sh"
 	chmod +x "$PREFIX"/bin/depotdownloader
