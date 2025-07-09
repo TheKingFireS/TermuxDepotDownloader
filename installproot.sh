@@ -15,6 +15,8 @@ installersetup() {
 	pkg autoclean
 	pkg clean
 	proot-distro install alpine
+	# downgrade to v3.22 from edge to fix proot issue
+	sed -i 's/edge/v3.22/g' "$installed_rootfs"/alpine/etc/apk/repositories
 	# update and installing required alpine packages
 	proot-distro login alpine --shared-tmp -- apk update
 	proot-distro login alpine --shared-tmp -- apk upgrade
