@@ -87,17 +87,27 @@ if echo "$TERMUX_VERSION" | grep -q '^googleplay\.'; then
 	print_yellow "may get some issues that I don't have that in GH/FD"
 	exit 1
 fi
-if [ "$arch" = "x86_64" ]; then
-	echo "X86_64 Architecture"
+
+# Detect CPU/SoC architectures
+if [ "$arch" = "i686" ]; then
+	echo "x86 32bit Architecture"
+	print_yellow "This arch. is not supported on this project."
+	print_yellow "Use native DepotDownloader from tur-repo instead,"
+	print_yellow "it's not same as my project, but it's only choice."
+	print_yellow "To install depotdownloader, run these command."
+	echo "pkg install tur-repo && pkg install depotdownloader"
+	exit 1
+elif [ "$arch" = "x86_64" ]; then
+	echo "x86 64bit Architecture"
 	installersetup
 	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
 elif [ "$arch" = "arm" ]; then
-	echo "ARM32 Architecture"
+	echo "ARM 32bit Architecture"
 	installersetup
 	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
 elif [ "$arch" = "aarch64" ]; then
-	echo "ARM64 Architecture"
-	echo "Added 'GC heap initialization failed with error 0x8007000E' workaround"
+	echo "ARM 64bit Architecture"
+	echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
 	installersetup
 	echo "export DOTNET_GCHeapHardLimit=1C0000000" > "$installed_rootfs"/alpine/etc/profile.d/dotnet.sh
 	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
