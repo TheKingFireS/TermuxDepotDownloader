@@ -31,6 +31,13 @@ installersetup() {
 	chmod u-w  "$installed_rootfs"/alpine/etc/doas.d/doas.conf
 	# setup storage and directory for depotdownloader
 	if [ ! -d "$HOME/storage" ]; then
+		print_yellow "Requesting storage permission, please accept."
+		print_yellow "If permission manager didn't pop-up and you"
+		print_yellow "got stuck, press CTRL-C and manually allow"
+		print_yellow "storage permssion for Termux app. This is"
+		print_yellow "needed for creating and using depotdownloaded"
+		print_yellow "folder on Downloads folder instead of on Termux."
+		print_yellow "Then run \"pd rm alpine\" and try again."
 		termux-setup-storage
 		while ! [ -d "$HOME/storage" ]; do
 			sleep 0.1
