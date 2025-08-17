@@ -6,8 +6,8 @@ username="user"
 SET_DIR="${SET_DIR:-/storage/emulated/0/Download/depotdownloaded}"
 # end of setting env var
 # language strings
-LANG_DOWNLOAD_FINISHED="Download finished! Check the '${SET_DIR#/storage/emulated/0/}' folder in your file manager app."
-LANG_FAILED="Failed"
+LANG_SUCCESS_DOWNLOAD="${LANG_SUCCESS_DOWNLOAD:-Download finished! Check the '${SET_DIR#/storage/emulated/0/}' folder in your file manager app.}"
+LANG_FAILED="${LANG_FAILED:-Failed}"
 # setting function
 print_green() {
 	# Bold bright green
@@ -21,7 +21,7 @@ print_red() {
 proot-distro login alpine --user $username --no-arch-warning --shared-tmp -- ash -c "cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
 if [ $? -eq 0 ]; then
 	if [ "$#" -ne 0 ] && ! echo "$@" | grep -qE '(^|\s)(-V|--version)($|\s)'; then
-		print_green "$LANG_DOWNLOAD_FINISHED"
+		print_green "$LANG_SUCCESS_DOWNLOAD"
 	fi
 else
 	print_red "$LANG_FAILED"
