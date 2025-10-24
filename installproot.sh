@@ -107,7 +107,7 @@ elif [ "$arch" = "aarch64" ]; then
 	echo "ARM 64bit Architecture"
 	echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
 	installersetup
-	echo "export DOTNET_GCHeapHardLimit=1C0000000" > "$installed_rootfs"/alpine/etc/profile.d/dotnet.sh
+	echo "export DOTNET_GCHeapHardLimitPercent=40" > "$installed_rootfs"/alpine/etc/profile.d/dotnet.sh
 	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
 # Added it, will uncomment when it get supported.
 #elif [ "$arch" = "riscv64" ]; then
