@@ -1,6 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/env sh
 # Download and install proot alpine (WIP)
 
+# safety
+set -o pipefail
+shopt -s failglob
+set -u
+
 # setting env var
 arch=$(dpkg --print-architecture)
 username="user"
