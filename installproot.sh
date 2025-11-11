@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/env sh
+#!/data/data/com.termux/files/usr/bin/env bash
 # Download and install proot alpine (WIP)
 
 # setting env var
