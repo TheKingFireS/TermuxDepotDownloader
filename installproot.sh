@@ -25,7 +25,7 @@ installersetup() {
 	proot-distro login alpine --shared-tmp -- apk upgrade
 	proot-distro login alpine --shared-tmp -- apk add doas libstdc++ libgcc
 	proot-distro login alpine --shared-tmp -- apk cache clean
-	rm "$installed_rootfs"/alpine/var/cache/apk/*.apk
+	(set +o pipefail; rm "$installed_rootfs"/alpine/var/cache/apk/*.apk)
 	# add user
 	proot-distro login alpine --shared-tmp -- addgroup storage
 	proot-distro login alpine --shared-tmp -- adduser -G wheel -D $username
