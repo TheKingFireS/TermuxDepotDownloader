@@ -24,8 +24,7 @@ installersetup() {
 	proot-distro login alpine --shared-tmp -- apk update
 	proot-distro login alpine --shared-tmp -- apk upgrade
 	proot-distro login alpine --shared-tmp -- apk add doas libstdc++ libgcc
-	proot-distro login alpine --shared-tmp -- apk cache clean
-	(set +o pipefail; rm "$installed_rootfs"/alpine/var/cache/apk/*.apk)
+	proot-distro login alpine --shared-tmp -- apk cache purge
 	# add user
 	proot-distro login alpine --shared-tmp -- adduser -G wheel -D $username
 	echo "permit nopass :wheel as root" > "$installed_rootfs"/alpine/etc/doas.d/doas.conf
