@@ -7,7 +7,7 @@
 ```bash
 bash <(curl -sSL "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installproot.sh")
 ```
-### If you get error during ./installproot.sh (Use termux-change-repo for...)
+### If you get error during process (Use termux-change-repo for...)
 
 Run that command ``termux-change-repo``
 
