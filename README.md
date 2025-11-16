@@ -3,7 +3,7 @@
 ## Install Termux from Github or F-Droid to replace outdated Google Play Store version
  - Github(choose the right architecture or use ``universal``): https://github.com/termux/termux-app/releases/latest
  - F-Droid: https://f-droid.org/en/packages/com.termux
-## Download and run a script for Termux.
+## Run this installer command on Termux.
 ```bash
 bash <(curl -sSL "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installproot.sh")
 ```
@@ -15,7 +15,7 @@ Press enter for select "Mirror group".
 
 Press arrow keys and press spacebar for select continent that you're currently living in.
 
-Try again run ``./installproot.sh``
+Try again run installer above 
 
 ## Using of DepotDownloader
 **Exemple:** ``depotdownloader -username user -password 1234 -app 220 -depot 221 -dir HL2 -validate``
