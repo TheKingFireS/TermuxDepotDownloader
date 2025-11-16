@@ -5,9 +5,7 @@
  - F-Droid: https://f-droid.org/en/packages/com.termux
 ## Download and run a script for Termux.
 ```bash
-curl -LO "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installproot.sh"
-chmod +x installproot.sh
-./installproot.sh
+bash <(curl -sSL "https://raw.githubusercontent.com/TheKingFireS/TermuxDepotDownloader/alpine/installproot.sh")
 ```
 ### If you get error during ./installproot.sh (Use termux-change-repo for...)
 
