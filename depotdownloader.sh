@@ -2,6 +2,8 @@
 # WIP
 # setting env var
 username="user"
+installed_rootfs="$PREFIX/var/lib/proot-distro/installed-rootfs"
+IsolatedStorage="$installed_rootfs/alpine/home/user/.local/share/IsolatedStorage"
 
 # SET_DIR: will only work if you provided path from proot and not Termux. Yes, full path.
 SET_DIR="${SET_DIR:-/storage/emulated/0/Download/depotdownloaded}"
@@ -22,6 +24,22 @@ print_red() {
 }
 # end of setting function
 
+# custom parameters
+# clear
+if [ "$1" = "rmis" ]; then
+	if [ -d "$IsolatedStorage" ]; then
+		rm -r "$IsolatedStorage"
+		print_green "Successfully cleared Depotdownloader data"
+	else
+		print_red "There's nothing to clear"
+		exit 1
+	fi
+
+	exit 0
+fi
+# end of custom parameters
+
+# wrap DepotDownloader
 proot-distro login alpine --user $username --no-arch-warning --shared-tmp -- ash -c "cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
 if [ $? -eq 0 ]; then
 	if [ "$#" -ne 0 ] && ! echo "$@" | grep -qE '(^|\s)(-V|--version)($|\s)'; then
