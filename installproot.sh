@@ -5,11 +5,15 @@
 set -o pipefail
 shopt -s failglob
 set -u
+# end of safety
 
 # setting env var
 arch=$(dpkg --print-architecture)
 username="user"
 installed_rootfs="$PREFIX/var/lib/proot-distro/installed-rootfs"
+
+# BETA: download beta version instead of normal
+BETA="${BETA:-0}"
 # end of setting env var
 
 # setting function
@@ -100,22 +104,38 @@ if [ "$arch" = "i686" ]; then
 elif [ "$arch" = "x86_64" ]; then
 	echo "x86 64bit Architecture"
 	installersetup
-	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
+	if [ "$BETA" -eq 1 ]; then
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-x64-unofficial.zip"
+	fi
 elif [ "$arch" = "arm" ]; then
 	echo "ARM 32bit Architecture"
 	installersetup
-	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
+	if [ "$BETA" -eq 1 ]; then
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm-unofficial.zip"
+	fi
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM 64bit Architecture"
 	echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
 	installersetup
 	echo "export DOTNET_GCHeapHardLimitPercent=40" > "$installed_rootfs"/alpine/etc/profile.d/dotnet.sh
-	dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
+	if [ "$BETA" -eq 1 ]; then
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm64-unofficial.zip"
+	fi
 # Added it, will uncomment when it get supported.
 #elif [ "$arch" = "riscv64" ]; then
 #	echo "RISC-V 64bit Architecture"
 #	installersetup
-#	dlfile "..."
+#	if [ "$BETA" -eq 1 ]; then
+#		dlfile "..."
+#	else
+#		dlfile "..."
+#	fi
 else
 	echo "Unsupported ""$arch"" architecture detected, exiting..."
 	exit 1
