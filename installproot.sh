@@ -105,6 +105,8 @@ elif [ "$arch" = "x86_64" ]; then
 	echo "x86 64bit Architecture"
 	installersetup
 	if [ "$BETA" -eq 1 ]; then
+		print_yellow "WARNING: You are downloading beta version"
+		sleep 1
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-x64-unofficial.zip"
@@ -113,6 +115,8 @@ elif [ "$arch" = "arm" ]; then
 	echo "ARM 32bit Architecture"
 	installersetup
 	if [ "$BETA" -eq 1 ]; then
+		print_yellow "WARNING: You are downloading beta version"
+		sleep 1
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm-unofficial.zip"
@@ -123,6 +127,8 @@ elif [ "$arch" = "aarch64" ]; then
 	installersetup
 	echo "export DOTNET_GCHeapHardLimitPercent=40" > "$installed_rootfs"/alpine/etc/profile.d/dotnet.sh
 	if [ "$BETA" -eq 1 ]; then
+		print_yellow "WARNING: You are downloading beta version"
+		sleep 1
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm64-unofficial.zip"
@@ -132,6 +138,8 @@ elif [ "$arch" = "aarch64" ]; then
 #	echo "RISC-V 64bit Architecture"
 #	installersetup
 #	if [ "$BETA" -eq 1 ]; then
+#		print_yellow "WARNING: You are downloading beta version"
+#		sleep 1
 #		dlfile "..."
 #	else
 #		dlfile "..."
