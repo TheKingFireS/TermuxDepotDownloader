@@ -107,9 +107,9 @@ elif [ "$arch" = "x86_64" ]; then
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
-	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-x64-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
 	fi
 elif [ "$arch" = "arm" ]; then
 	echo "ARM 32bit Architecture"
@@ -117,9 +117,9 @@ elif [ "$arch" = "arm" ]; then
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
-	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
 	fi
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM 64bit Architecture"
@@ -129,9 +129,9 @@ elif [ "$arch" = "aarch64" ]; then
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
-	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm64-unofficial.zip"
+	else
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
 	fi
 # Added it, will uncomment when it get supported.
 #elif [ "$arch" = "riscv64" ]; then
