@@ -2,8 +2,8 @@
 # WIP
 # setting env var
 username="user"
-installed_rootfs="$PREFIX/var/lib/proot-distro/installed-rootfs"
-IsolatedStorage="$installed_rootfs/alpine/home/user/.local/share/IsolatedStorage"
+installed_rootfs="/data/data/com.termux/files/usr/var/lib/proot-distro/containers/alpine"
+IsolatedStorage="$installed_rootfs/rootfs/home/user/.local/share/IsolatedStorage"
 
 # SET_DIR: will only work if you provided path from proot and not Termux. Yes, full path.
 SET_DIR="${SET_DIR:-/storage/emulated/0/Download/depotdownloaded}"
