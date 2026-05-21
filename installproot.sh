@@ -125,7 +125,7 @@ elif [ "$arch" = "aarch64" ]; then
 	echo "ARM 64bit Architecture"
 	echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
 	installersetup
-    echo "export DOTNET_GCHeapHardLimit=40000000" > "$installed_rootfs"/rootfs/etc/profile.d/dotnet.sh
+#shits not working anymore   echo "export DOTNET_GCHeapHardLimit=40000000" > "$installed_rootfs"/rootfs/etc/profile.d/dotnet.sh
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
