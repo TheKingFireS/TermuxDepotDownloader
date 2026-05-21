@@ -40,7 +40,7 @@ fi
 # end of custom parameters
 
 # wrap DepotDownloader
-proot-distro login alpine --user $username --no-arch-warning --shared-tmp -- ash -c "cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
+proot-distro login alpine --user $username --no-arch-warning --shared-tmp -- ash -c "export DOTNET_GCHeapHardLimit=0x2625A00 && cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
 if [ $? -eq 0 ]; then
 	if [ "$#" -ne 0 ] && ! echo "$@" | grep -qE '(^|\s)(-V|--version)($|\s)'; then
 		print_green "$LANG_SUCCESS_DOWNLOAD"
