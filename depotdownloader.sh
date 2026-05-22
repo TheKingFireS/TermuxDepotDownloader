@@ -2,8 +2,8 @@
 # WIP
 # setting env var
 username="user"
-installed_rootfs="$PREFIX/var/lib/proot-distro/installed-rootfs"
-IsolatedStorage="$installed_rootfs/alpine/home/user/.local/share/IsolatedStorage"
+installed_rootfs="$PREFIX/var/lib/proot-distro/containers/alpine/rootfs"
+IsolatedStorage="$installed_rootfs/home/user/.local/share/IsolatedStorage"
 
 # SET_DIR: will only work if you provided path from proot and not Termux. Yes, full path.
 SET_DIR="${SET_DIR:-/storage/emulated/0/Download/depotdownloaded}"
@@ -40,7 +40,7 @@ fi
 # end of custom parameters
 
 # wrap DepotDownloader
-proot-distro login alpine --user $username --no-arch-warning --shared-tmp -- ash -c "cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
+proot-distro login alpine --user $username --shared-tmp -- ash -lc "cd \"$SET_DIR\" && DepotDownloader \"\$@\"" -- "$@"
 if [ $? -eq 0 ]; then
 	if [ "$#" -ne 0 ] && ! echo "$@" | grep -qE '(^|\s)(-V|--version)($|\s)'; then
 		print_green "$LANG_SUCCESS_DOWNLOAD"
