@@ -27,7 +27,7 @@ installersetup() {
 	# update and installing required alpine packages
 	proot-distro login alpine --shared-tmp -- apk update
 	proot-distro login alpine --shared-tmp -- apk upgrade
-	proot-distro login alpine --shared-tmp -- apk add doas libstdc++ libgcc
+	proot-distro login alpine --shared-tmp -- apk add doas
 	proot-distro login alpine --shared-tmp -- apk cache purge
 	# add user
 	proot-distro login alpine --shared-tmp -- adduser -G wheel -D $username
@@ -107,7 +107,7 @@ elif [ "$arch" = "x86_64" ]; then
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-x64-unofficial.zip"
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/nativeaot-alpine-experiment/DepotDownloader-linux-musl-x64-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-x64-unofficial.zip"
 	fi
@@ -117,19 +117,19 @@ elif [ "$arch" = "arm" ]; then
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm-unofficial.zip"
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/nativeaot-alpine-experiment/DepotDownloader-linux-musl-arm-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm-unofficial.zip"
 	fi
 elif [ "$arch" = "aarch64" ]; then
 	echo "ARM 64bit Architecture"
-	echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
+	#echo "Added \"GC heap initialization failed with error 0x8007000E\" workaround"
 	installersetup
-	echo "export DOTNET_GCHeapHardLimitPercent=40" > "$installed_rootfs"/etc/profile.d/dotnet.sh
+	#echo "export DOTNET_GCHeapHardLimitPercent=40" > "$installed_rootfs"/etc/profile.d/dotnet.sh
 	if [ "$BETA" -eq 1 ]; then
 		print_yellow "WARNING: You are downloading beta version"
 		sleep 1
-		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine-beta/DepotDownloader-linux-musl-arm64-unofficial.zip"
+		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/nativeaot-alpine-experiment/DepotDownloader-linux-musl-arm64-unofficial.zip"
 	else
 		dlfile "https://github.com/TheKingFireS/TermuxDepotDownloader/releases/download/selfcontained-alpine/DepotDownloader-linux-musl-arm64-unofficial.zip"
 	fi
